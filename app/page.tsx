@@ -96,10 +96,10 @@ export default function HomePage() {
               que escalan.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-            <div className="group relative p-8 md:p-12 bg-surface-container rounded-3xl overflow-hidden transition-all duration-500 hover:bg-surface-container-high border border-white/5 hover:border-primary/30">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter md:items-stretch">
+            <div className="group relative h-full flex flex-col p-8 md:p-12 bg-surface-container rounded-3xl overflow-hidden transition-all duration-500 hover:bg-surface-container-high border border-white/5 hover:border-primary/30">
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 transition-colors" />
-              <div className="relative z-10 flex flex-col h-full">
+              <div className="relative z-10 flex flex-1 flex-col min-h-0">
                 <div className="w-16 h-16 rounded-2xl bg-surface flex items-center justify-center text-primary mb-8 border border-white/5 group-hover:scale-110 transition-transform">
                   <Icon name="terminal" className="text-[32px]" />
                 </div>
@@ -133,9 +133,9 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="group relative p-8 md:p-12 bg-surface-container rounded-3xl overflow-hidden transition-all duration-500 hover:bg-surface-container-high border border-white/5 hover:border-tertiary/30 mt-0 md:mt-12">
+            <div className="group relative h-full flex flex-col p-8 md:p-12 bg-surface-container rounded-3xl overflow-hidden transition-all duration-500 hover:bg-surface-container-high border border-white/5 hover:border-tertiary/30">
               <div className="absolute top-0 right-0 w-64 h-64 bg-tertiary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-tertiary/10 transition-colors" />
-              <div className="relative z-10 flex flex-col h-full">
+              <div className="relative z-10 flex flex-1 flex-col min-h-0">
                 <div className="w-16 h-16 rounded-2xl bg-surface flex items-center justify-center text-tertiary mb-8 border border-white/5 group-hover:scale-110 transition-transform">
                   <Icon name="design_services" className="text-[32px]" />
                 </div>
