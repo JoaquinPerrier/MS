@@ -29,8 +29,8 @@ export const images = {
 } as const;
 
 export const navItems = [
-  { href: "/", label: "Home", match: "home" },
-  { href: "/servicios", label: "Services", match: "services" },
-  { href: "/metodologia", label: "Methodology", match: "methodology" },
-  { href: "/proyectos", label: "Projects", match: "projects" },
+  { href: "/", label: "Inicio", match: "home" },
+  { href: "/servicios", label: "Servicios", match: "services" },
+  { href: "/metodologia", label: "Metodología", match: "methodology" },
+  { href: "/proyectos", label: "Proyectos", match: "projects" },
 ] as const;

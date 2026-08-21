@@ -44,7 +44,7 @@ export function Header() {
             href="/contacto"
             className="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-full font-label-caps text-label-caps hover:bg-primary-container hover:text-on-primary-container transition-all"
           >
-            Contact Us
+            Contacto
           </Link>
           <button
             type="button"
@@ -81,7 +81,7 @@ export function Header() {
             onClick={() => setOpen(false)}
             className="mt-2 inline-flex w-fit bg-primary text-on-primary px-6 py-2 rounded-full font-label-caps text-label-caps"
           >
-            Contact Us
+            Contacto
           </Link>
         </div>
       ) : null}
