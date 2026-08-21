@@ -1,0 +1,131 @@
+import type { Metadata } from "next";
+import { ContactForm } from "@/components/ContactForm";
+import { Icon } from "@/components/Icon";
+import { images, site } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Contacto",
+  description: "Iniciemos una conversación. Contanos sobre tu próximo proyecto.",
+};
+
+const partners = [
+  { label: <>TECH<span className="text-primary">CORP</span></>, className: "font-bold tracking-tighter" },
+  { label: <>Global<span className="font-light">Sys</span></>, className: "italic" },
+  { label: "NEXUS", className: "uppercase tracking-widest" },
+  { label: <>Data<span className="text-tertiary">Flow</span></>, className: "" },
+  { label: "OMNI", className: "font-black" },
+];
+
+export default function ContactPage() {
+  return (
+    <div className="flex flex-col w-full">
+      <section className="relative w-full pt-12 pb-24 lg:pt-24 lg:pb-32 px-margin-mobile lg:px-margin-desktop overflow-hidden">
+        <div className="absolute inset-0 w-full h-full pointer-events-none opacity-20">
+          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern height="40" id="grid-pattern" patternUnits="userSpaceOnUse" width="40">
+                <path
+                  className="text-on-surface-variant"
+                  d="M 40 0 L 0 0 0 40"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="0.5"
+                />
+              </pattern>
+            </defs>
+            <rect fill="url(#grid-pattern)" height="100%" width="100%" />
+          </svg>
+          <div className="absolute top-0 right-0 w-[50vw] h-[50vw] rounded-full bg-primary/10 blur-[120px] transform translate-x-1/4 -translate-y-1/4" />
+        </div>
+        <div className="max-w-container-max mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
+          <div className="lg:col-span-5 flex flex-col gap-12">
+            <div className="space-y-6">
+              <span className="font-label-caps text-label-caps text-primary tracking-[0.2em] uppercase flex items-center gap-4 before:w-8 before:h-[1px] before:bg-primary">
+                Hablemos
+              </span>
+              <h1 className="font-display-lg text-display-lg text-on-surface tracking-tight">
+                Iniciemos una <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-tertiary">
+                  Conversación.
+                </span>
+              </h1>
+              <p className="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                Estamos listos para transformar tu visión en una realidad digital. Contáctanos para
+                discutir tu próximo proyecto o para conocer más sobre nuestra metodología.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-8">
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary shadow-sm">
+                  <Icon name="location_on" className="text-[24px]" />
+                </div>
+                <div>
+                  <h3 className="font-headline-md text-headline-md text-on-surface mb-2">Madrid HQ</h3>
+                  <address className="not-italic font-body-md text-body-md text-on-surface-variant">
+                    Paseo de la Castellana, 259
+                    <br />
+                    28046 Madrid, España
+                  </address>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary shadow-sm">
+                  <Icon name="mail" className="text-[24px]" />
+                </div>
+                <div>
+                  <h3 className="font-headline-md text-headline-md text-on-surface mb-2">
+                    Contacto Directo
+                  </h3>
+                  <a
+                    className="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300 flex items-center gap-2"
+                    href={`mailto:${site.email}`}
+                  >
+                    {site.email}
+                    <Icon name="arrow_forward" className="text-[16px]" />
+                  </a>
+                  <p className="font-body-md text-body-md text-on-surface-variant mt-1">{site.phone}</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative w-full h-48 bg-surface-container rounded-2xl overflow-hidden mt-4 shadow-md group">
+              <div className="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent z-10 pointer-events-none" />
+              <div
+                className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                style={{ backgroundImage: `url("${images.madrid}")` }}
+              />
+              <div className="absolute bottom-4 left-4 z-20 flex items-center gap-2 bg-surface/80 backdrop-blur-md px-4 py-2 rounded-full shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                <span className="font-label-caps text-label-caps text-on-surface">
+                  Operando Globalmente
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="lg:col-span-7 lg:-mt-12">
+            <ContactForm variant="page" />
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full py-16 bg-surface-container-low overflow-hidden shadow-inner relative">
+        <div className="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop flex flex-col md:flex-row items-center gap-8 justify-between">
+          <h4 className="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest shrink-0 whitespace-nowrap">
+            Empresas que confían en nosotros
+          </h4>
+          <div className="flex-1 w-full overflow-hidden relative">
+            <div className="flex space-x-16 items-center w-max animate-marquee opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+              {[...partners, ...partners].map((partner, index) => (
+                <div
+                  key={`${index}-${partner.className}`}
+                  className={`font-headline-md text-headline-md text-on-surface ${partner.className}`}
+                >
+                  {partner.label}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

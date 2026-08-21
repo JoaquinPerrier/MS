@@ -1,0 +1,257 @@
+import type { Metadata } from "next";
+import { Icon } from "@/components/Icon";
+import { images } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Metodología",
+  description:
+    "Proceso iterativo que fusiona pensamiento estratégico, ingeniería de precisión y estética de vanguardia.",
+};
+
+const steps = [
+  {
+    number: "01",
+    icon: "radar",
+    accent: "primary",
+    title: "Descubrimiento & Estrategia",
+    description:
+      "Iniciamos con una inmersión profunda en el núcleo de tu negocio. Auditamos sistemas existentes, analizamos la competencia y definimos KPIs claros. El resultado es un mapa de ruta estratégico (blueprint) que alinea la visión técnica con los objetivos comerciales a largo plazo.",
+  },
+  {
+    number: "02",
+    icon: "architecture",
+    accent: "tertiary",
+    title: "Diseño & Prototipado",
+    description:
+      "Traducimos la estrategia en experiencias visuales y funcionales de alto impacto. Creamos sistemas de diseño escalables y prototipos interactivos de alta fidelidad, permitiendo pruebas de usuario tempranas y validación antes de escribir una sola línea de código.",
+  },
+  {
+    number: "03",
+    icon: "terminal",
+    accent: "primary-container",
+    title: "Desarrollo Ágil",
+    description:
+      "Ejecutamos en sprints iterativos de dos semanas. Nuestro equipo de ingenieros aplica metodologías ágiles estrictas, integración continua (CI/CD) y revisiones de código exhaustivas para asegurar un software robusto, seguro y de alto rendimiento.",
+  },
+  {
+    number: "04",
+    icon: "rocket_launch",
+    accent: "secondary",
+    title: "Lanzamiento & Soporte",
+    description:
+      "Despliegue orquestado con cero tiempo de inactividad. Posterior al lanzamiento, proporcionamos monitoreo continuo 24/7, optimización de rendimiento y soporte proactivo para asegurar que el sistema escale junto con el crecimiento de tu empresa.",
+  },
+] as const;
+
+const accentClasses = {
+  primary: {
+    bar: "via-primary/20",
+    number: "group-hover/card:text-primary",
+    icon: "group-hover/card:bg-primary group-hover/card:text-on-primary",
+    title: "group-hover/card:text-primary",
+  },
+  tertiary: {
+    bar: "via-tertiary/20",
+    number: "group-hover/card:text-tertiary",
+    icon: "group-hover/card:bg-tertiary group-hover/card:text-on-tertiary",
+    title: "group-hover/card:text-tertiary",
+  },
+  "primary-container": {
+    bar: "via-primary-container/20",
+    number: "group-hover/card:text-primary-container",
+    icon: "group-hover/card:bg-primary-container group-hover/card:text-on-primary-container",
+    title: "group-hover/card:text-primary-container",
+  },
+  secondary: {
+    bar: "via-secondary/20",
+    number: "group-hover/card:text-secondary",
+    icon: "group-hover/card:bg-secondary group-hover/card:text-on-secondary",
+    title: "group-hover/card:text-secondary",
+  },
+} as const;
+
+export default function MethodologyPage() {
+  return (
+    <div className="flex flex-col w-full relative">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] mix-blend-screen transform translate-x-1/3 -translate-y-1/4" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-tertiary/5 rounded-full blur-[100px] mix-blend-screen transform -translate-x-1/4 translate-y-1/4" />
+      </div>
+
+      <section className="w-full max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop pt-24 pb-32 relative z-10">
+        <div className="flex flex-col gap-8 max-w-4xl">
+          <h1 className="font-display-lg text-display-lg text-on-surface bg-clip-text text-transparent bg-gradient-to-r from-on-surface to-on-surface-variant">
+            Nuestra
+            <br />
+            Metodología
+          </h1>
+          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            En Compañia, no solo construimos software; diseñamos ecosistemas digitales resilientes.
+            Nuestro proceso iterativo fusiona pensamiento estratégico, ingeniería de precisión y
+            estética de vanguardia para transformar visiones complejas en realidades tangibles y
+            escalables.
+          </p>
+        </div>
+      </section>
+
+      <section className="w-full bg-surface-container-low py-32 relative z-10">
+        <div className="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 group">
+            {steps.map((step) => {
+              const accent = accentClasses[step.accent];
+              return (
+                <div
+                  key={step.number}
+                  className="relative bg-surface-container rounded-2xl p-8 hover:bg-surface-container-high transition-all duration-500 ease-out group-hover:opacity-50 hover:!opacity-100 cursor-pointer overflow-hidden group/card"
+                >
+                  <div
+                    className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent ${accent.bar} to-transparent transform -translate-x-full group-hover/card:translate-x-full transition-transform duration-1000`}
+                  />
+                  <div className="flex flex-col h-full gap-12">
+                    <div className="flex justify-between items-start">
+                      <span
+                        className={`font-headline-xl text-headline-xl text-surface-variant ${accent.number} transition-colors duration-300`}
+                      >
+                        {step.number}
+                      </span>
+                      <div
+                        className={`w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center ${accent.icon} transition-colors duration-300`}
+                      >
+                        <Icon name={step.icon} className="text-[24px]" />
+                      </div>
+                    </div>
+                    <div className="space-y-4">
+                      <h3
+                        className={`font-headline-md text-headline-md text-on-surface ${accent.title} transition-colors duration-300`}
+                      >
+                        {step.title}
+                      </h3>
+                      <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed line-clamp-4">
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full bg-surface py-32 relative z-10 overflow-hidden">
+        <div className="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop flex flex-col lg:flex-row gap-16 items-center">
+          <div className="flex-1 space-y-8 w-full">
+            <h2 className="font-headline-xl-mobile lg:font-headline-xl text-headline-xl-mobile lg:text-headline-xl text-on-surface">
+              Precisión en cada
+              <br />
+              fase del ciclo
+            </h2>
+            <p className="font-body-lg text-body-lg text-on-surface-variant">
+              Nuestro dashboard de progreso en tiempo real permite a los clientes visualizar el
+              estado de cada sprint, métricas de calidad de código y cobertura de tests. La
+              transparencia radical es el núcleo de nuestro modelo operativo.
+            </p>
+            <div className="flex flex-col gap-6 pt-4">
+              <div className="bg-surface-container-low p-6 rounded-xl flex items-center gap-6 group hover:bg-surface-container transition-colors">
+                <div className="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center relative overflow-hidden">
+                  <svg className="absolute inset-0 w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+                    <path
+                      className="text-surface-variant"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeDasharray="100, 100"
+                      strokeWidth="2"
+                    />
+                    <path
+                      className="text-primary transition-all duration-1000 ease-out"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeDasharray="85, 100"
+                      strokeWidth="2"
+                    />
+                  </svg>
+                  <span className="font-label-caps text-label-caps text-on-surface relative z-10">
+                    85%
+                  </span>
+                </div>
+                <div>
+                  <h4 className="font-headline-md text-headline-md text-on-surface text-[18px]">
+                    Cobertura de Pruebas
+                  </h4>
+                  <p className="font-body-md text-body-md text-on-surface-variant text-[14px]">
+                    Test Unitarios y E2E automatizados
+                  </p>
+                </div>
+              </div>
+              <div className="bg-surface-container-low p-6 rounded-xl flex items-center gap-6 group hover:bg-surface-container transition-colors">
+                <div className="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center relative overflow-hidden">
+                  <svg className="absolute inset-0 w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+                    <path
+                      className="text-surface-variant"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeDasharray="100, 100"
+                      strokeWidth="2"
+                    />
+                    <path
+                      className="text-tertiary transition-all duration-1000 ease-out"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeDasharray="99, 100"
+                      strokeWidth="2"
+                    />
+                  </svg>
+                  <span className="font-label-caps text-label-caps text-on-surface relative z-10">
+                    99%
+                  </span>
+                </div>
+                <div>
+                  <h4 className="font-headline-md text-headline-md text-on-surface text-[18px]">
+                    Uptime Garantizado
+                  </h4>
+                  <p className="font-body-md text-body-md text-on-surface-variant text-[14px]">
+                    Arquitectura Cloud Resiliente
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex-1 w-full relative">
+            <div className="aspect-square w-full rounded-2xl overflow-hidden bg-surface-container-high shadow-xl relative group">
+              <div
+                className="bg-cover bg-center w-full h-full opacity-80 group-hover:scale-105 transition-transform duration-700 ease-out mix-blend-luminosity"
+                style={{ backgroundImage: `url("${images.methodology}")` }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent" />
+              <div className="absolute bottom-8 left-8 right-8 bg-surface/90 backdrop-blur-md rounded-xl p-6 shadow-2xl border border-white/5 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                <div className="flex justify-between items-end">
+                  <div>
+                    <span className="font-label-caps text-label-caps text-primary block mb-2">
+                      SPRINT ACTUAL
+                    </span>
+                    <span className="font-headline-md text-headline-md text-on-surface">
+                      Fase 3: Integración API
+                    </span>
+                  </div>
+                  <div className="text-right">
+                    <span className="font-label-caps text-label-caps text-on-surface-variant block mb-2">
+                      PROGRESO
+                    </span>
+                    <span className="font-headline-md text-headline-md text-on-surface">64%</span>
+                  </div>
+                </div>
+                <div className="w-full h-1 bg-surface-container-highest mt-4 rounded-full overflow-hidden">
+                  <div className="h-full bg-primary w-[64%] shadow-[0_0_10px_rgba(207,188,255,0.5)]" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

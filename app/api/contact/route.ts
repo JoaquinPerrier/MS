@@ -1,0 +1,123 @@
+import { Resend } from "resend";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
+import path from "node:path";
+import { NextResponse } from "next/server";
+import { contactSchema } from "@/lib/contact";
+import { site } from "@/lib/site";
+
+export const runtime = "nodejs";
+
+const submissionsFile = path.join(process.cwd(), "data", "contacts.json");
+
+export async function POST(request: Request) {
+  try {
+    const body = await request.json();
+    const parsed = contactSchema.safeParse(body);
+
+    if (!parsed.success) {
+      return NextResponse.json(
+        { error: parsed.error.issues[0]?.message ?? "Datos inválidos" },
+        { status: 400 },
+      );
+    }
+
+    const { website, ...payload } = parsed.data;
+
+    if (website) {
+      return NextResponse.json({ ok: true });
+    }
+
+    const receivedAt = new Date().toISOString();
+    await persistSubmission({ ...payload, receivedAt });
+
+    const emailed = await sendEmail({ ...payload, receivedAt });
+
+    return NextResponse.json({
+      ok: true,
+      emailed,
+    });
+  } catch (error) {
+    console.error("Contact form error", error);
+    return NextResponse.json(
+      { error: "No pudimos procesar tu mensaje. Intentá de nuevo." },
+      { status: 500 },
+    );
+  }
+}
+
+async function persistSubmission(entry: {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+  receivedAt: string;
+}) {
+  try {
+    await mkdir(path.dirname(submissionsFile), { recursive: true });
+    let existing: unknown[] = [];
+
+    try {
+      const raw = await readFile(submissionsFile, "utf8");
+      existing = JSON.parse(raw) as unknown[];
+      if (!Array.isArray(existing)) existing = [];
+    } catch {
+      existing = [];
+    }
+
+    existing.push(entry);
+    await writeFile(submissionsFile, JSON.stringify(existing, null, 2), "utf8");
+  } catch (error) {
+    console.warn("Could not persist contact submission", error);
+  }
+}
+
+async function sendEmail(entry: {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+  receivedAt: string;
+}) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.info("Contact submission without RESEND_API_KEY", entry);
+    return false;
+  }
+
+  const resend = new Resend(apiKey);
+  const to = process.env.CONTACT_TO_EMAIL || site.email;
+  const from = process.env.CONTACT_FROM_EMAIL || "Compañia <onboarding@resend.dev>";
+
+  const { error } = await resend.emails.send({
+    from,
+    to,
+    replyTo: entry.email,
+    subject: `Nueva consulta: ${entry.subject}`,
+    html: `
+      <div style="font-family: Inter, Arial, sans-serif; background:#141218; color:#e6e0e9; padding:24px;">
+        <h2 style="color:#cfbcff;">Nueva consulta desde el sitio</h2>
+        <p><strong>Nombre:</strong> ${escapeHtml(entry.name)}</p>
+        <p><strong>Email:</strong> ${escapeHtml(entry.email)}</p>
+        <p><strong>Asunto:</strong> ${escapeHtml(entry.subject)}</p>
+        <p><strong>Fecha:</strong> ${escapeHtml(entry.receivedAt)}</p>
+        <p style="white-space:pre-wrap; background:#211f24; padding:16px; border-radius:12px;">${escapeHtml(entry.message)}</p>
+      </div>
+    `,
+  });
+
+  if (error) {
+    console.error("Resend error", error);
+    throw new Error("No pudimos enviar el correo.");
+  }
+
+  return true;
+}
+
+function escapeHtml(value: string) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
