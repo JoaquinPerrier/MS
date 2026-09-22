@@ -19,15 +19,15 @@ export const contactSchema = z.object({
 export type ContactInput = z.infer<typeof contactSchema>;
 
 export const homeSubjects = [
-  "Desarrollo de Software a Medida",
-  "Branding & Diseño UI/UX",
-  "Consultoría Técnica",
+  "Desarrollo de software a medida",
+  "Marca y diseño de interfaces",
+  "Consultoría técnica",
   "Otro",
 ] as const;
 
 export const contactSubjects = [
-  { value: "Nuevo Proyecto de Desarrollo", label: "Nuevo Proyecto de Desarrollo" },
-  { value: "Estrategia de Branding", label: "Estrategia de Branding" },
-  { value: "Oportunidades de Carrera", label: "Oportunidades de Carrera" },
-  { value: "Otra Consulta", label: "Otra Consulta" },
+  { value: "Nuevo proyecto de desarrollo", label: "Nuevo proyecto de desarrollo" },
+  { value: "Estrategia de marca", label: "Estrategia de marca" },
+  { value: "Oportunidades laborales", label: "Oportunidades laborales" },
+  { value: "Otra consulta", label: "Otra consulta" },
 ] as const;

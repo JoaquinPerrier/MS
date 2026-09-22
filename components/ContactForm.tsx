@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState, type FormEvent } from "react";
 import { useForm } from "react-hook-form";
 import { Icon } from "@/components/Icon";
+import { useLegalModal } from "@/components/LegalModal";
 import {
   contactSchema,
   contactSubjects,
@@ -240,6 +240,7 @@ function PageForm({
   onSubmit,
   onReset,
 }: FormViewProps) {
+  const { openLegal } = useLegalModal();
   const inputClass =
     "w-full bg-surface/50 text-on-surface font-body-md text-body-md px-4 py-4 rounded-xl border border-transparent focus:border-primary focus:bg-surface focus:outline-none transition-all duration-300 peer placeholder-transparent shadow-sm";
   const labelClass =
@@ -340,9 +341,13 @@ function PageForm({
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pt-4">
           <p className="font-body-md text-[14px] text-on-surface-variant/70 max-w-xs order-2 sm:order-1">
             Al enviar este formulario, aceptas nuestra{" "}
-            <Link className="text-primary hover:underline" href="/privacidad">
+            <button
+              type="button"
+              className="text-primary hover:underline"
+              onClick={() => openLegal("privacy")}
+            >
               política de privacidad
-            </Link>
+            </button>
             .
           </p>
           <button

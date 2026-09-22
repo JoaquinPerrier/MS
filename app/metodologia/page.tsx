@@ -13,15 +13,15 @@ const steps = [
     number: "01",
     icon: "radar",
     accent: "primary",
-    title: "Descubrimiento & Estrategia",
+    title: "Descubrimiento y estrategia",
     description:
-      "Iniciamos con una inmersión profunda en el núcleo de tu negocio. Auditamos sistemas existentes, analizamos la competencia y definimos KPIs claros. El resultado es un mapa de ruta estratégico (blueprint) que alinea la visión técnica con los objetivos comerciales a largo plazo.",
+      "Iniciamos con una inmersión profunda en el núcleo de tu negocio. Auditamos sistemas existentes, analizamos la competencia y definimos indicadores claros. El resultado es un mapa de ruta estratégico que alinea la visión técnica con los objetivos comerciales a largo plazo.",
   },
   {
     number: "02",
     icon: "architecture",
     accent: "tertiary",
-    title: "Diseño & Prototipado",
+    title: "Diseño y prototipado",
     description:
       "Traducimos la estrategia en experiencias visuales y funcionales de alto impacto. Creamos sistemas de diseño escalables y prototipos interactivos de alta fidelidad, permitiendo pruebas de usuario tempranas y validación antes de escribir una sola línea de código.",
   },
@@ -31,13 +31,13 @@ const steps = [
     accent: "primary-container",
     title: "Desarrollo Ágil",
     description:
-      "Ejecutamos en sprints iterativos de dos semanas. Nuestro equipo de ingenieros aplica metodologías ágiles estrictas, integración continua (CI/CD) y revisiones de código exhaustivas para asegurar un software robusto, seguro y de alto rendimiento.",
+      "Ejecutamos en ciclos de dos semanas. Nuestro equipo de ingenieros aplica metodologías ágiles estrictas, integración y entrega continuas, y revisiones de código exhaustivas para asegurar un software robusto, seguro y de alto rendimiento.",
   },
   {
     number: "04",
     icon: "rocket_launch",
     accent: "secondary",
-    title: "Lanzamiento & Soporte",
+    title: "Lanzamiento y soporte",
     description:
       "Despliegue orquestado con cero tiempo de inactividad. Posterior al lanzamiento, proporcionamos monitoreo continuo 24/7, optimización de rendimiento y soporte proactivo para asegurar que el sistema escale junto con el crecimiento de tu empresa.",
   },
@@ -86,7 +86,7 @@ export default function MethodologyPage() {
             Metodología
           </h1>
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
-            En Compañia, no solo construimos software; diseñamos ecosistemas digitales resilientes.
+            En Jampe, no solo construimos software; diseñamos ecosistemas digitales resilientes.
             Nuestro proceso iterativo fusiona pensamiento estratégico, ingeniería de precisión y
             estética de vanguardia para transformar visiones complejas en realidades tangibles y
             escalables.
@@ -147,8 +147,8 @@ export default function MethodologyPage() {
               fase del ciclo
             </h2>
             <p className="font-body-lg text-body-lg text-on-surface-variant">
-              Nuestro dashboard de progreso en tiempo real permite a los clientes visualizar el
-              estado de cada sprint, métricas de calidad de código y cobertura de tests. La
+              Nuestro panel de progreso en tiempo real permite a los clientes visualizar el
+              estado de cada iteración, métricas de calidad de código y cobertura de pruebas. La
               transparencia radical es el núcleo de nuestro modelo operativo.
             </p>
             <div className="flex flex-col gap-6 pt-4">
@@ -181,7 +181,7 @@ export default function MethodologyPage() {
                     Cobertura de Pruebas
                   </h4>
                   <p className="font-body-md text-body-md text-on-surface-variant text-[14px]">
-                    Test Unitarios y E2E automatizados
+                    Pruebas unitarias y de extremo a extremo
                   </p>
                 </div>
               </div>
@@ -211,10 +211,10 @@ export default function MethodologyPage() {
                 </div>
                 <div>
                   <h4 className="font-headline-md text-headline-md text-on-surface text-[18px]">
-                    Uptime Garantizado
+                    Disponibilidad garantizada
                   </h4>
                   <p className="font-body-md text-body-md text-on-surface-variant text-[14px]">
-                    Arquitectura Cloud Resiliente
+                    Arquitectura en la nube resiliente
                   </p>
                 </div>
               </div>
@@ -231,10 +231,10 @@ export default function MethodologyPage() {
                 <div className="flex justify-between items-end">
                   <div>
                     <span className="font-label-caps text-label-caps text-primary block mb-2">
-                      SPRINT ACTUAL
+                      ITERACIÓN ACTUAL
                     </span>
                     <span className="font-headline-md text-headline-md text-on-surface">
-                      Fase 3: Integración API
+                      Fase 3: Integración de API
                     </span>
                   </div>
                   <div className="text-right">

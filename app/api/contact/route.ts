@@ -86,7 +86,7 @@ async function sendEmail(entry: {
 
   const resend = new Resend(apiKey);
   const to = process.env.CONTACT_TO_EMAIL || site.email;
-  const from = process.env.CONTACT_FROM_EMAIL || "Compañia <onboarding@resend.dev>";
+  const from = process.env.CONTACT_FROM_EMAIL || "Jampe <onboarding@resend.dev>";
 
   const { error } = await resend.emails.send({
     from,
@@ -97,7 +97,7 @@ async function sendEmail(entry: {
       <div style="font-family: Inter, Arial, sans-serif; background:#141218; color:#e6e0e9; padding:24px;">
         <h2 style="color:#cfbcff;">Nueva consulta desde el sitio</h2>
         <p><strong>Nombre:</strong> ${escapeHtml(entry.name)}</p>
-        <p><strong>Email:</strong> ${escapeHtml(entry.email)}</p>
+        <p><strong>Correo:</strong> ${escapeHtml(entry.email)}</p>
         <p><strong>Asunto:</strong> ${escapeHtml(entry.subject)}</p>
         <p><strong>Fecha:</strong> ${escapeHtml(entry.receivedAt)}</p>
         <p style="white-space:pre-wrap; background:#211f24; padding:16px; border-radius:12px;">${escapeHtml(entry.message)}</p>

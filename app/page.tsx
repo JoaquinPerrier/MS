@@ -36,13 +36,13 @@ export default function HomePage() {
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container/50 backdrop-blur-md border border-white/5">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               <span className="font-label-caps text-label-caps text-primary tracking-widest uppercase">
-                Ingeniería Digital de Precisión
+                Ingeniería de Desarrollo
               </span>
             </div>
             <h1 className="font-display-lg text-display-lg text-on-surface tracking-tighter max-w-4xl leading-tight">
-              Arquitectura <br className="hidden md:block" />
+              Diseño, <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-tertiary to-primary animate-gradient-x">
-                Visual y Lógica.
+                Código y Estrategia.
               </span>
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
@@ -66,9 +66,8 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <div className="lg:col-span-4 hidden lg:flex justify-end relative perspective-1000">
-            <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-surface-container border border-white/5 transform rotate-y-[-10deg] rotate-x-[5deg] hover:rotate-y-0 hover:rotate-x-0 transition-transform duration-700 ease-out shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent mix-blend-overlay z-10" />
+          <div className="lg:col-span-4 flex justify-end relative perspective-1000">
+            <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-surface-container border border-white/5 transform lg:rotate-y-[-10deg] lg:rotate-x-[5deg] hover:rotate-y-0 hover:rotate-x-0 transition-transform duration-700 ease-out shadow-2xl">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 className="w-full h-full object-cover"
@@ -85,7 +84,7 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <div className="max-w-2xl">
               <h2 className="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-4">
-                Competencias Core
+                Competencias clave
               </h2>
               <h3 className="font-headline-xl text-headline-xl text-on-surface">
                 Soluciones Integrales para la Era Digital
@@ -111,7 +110,7 @@ export default function HomePage() {
                   hasta sistemas internos que automatizan tus operaciones empresariales.
                 </p>
                 <ul className="space-y-3 mb-8">
-                  {["Aplicaciones Web & Móviles", "Integración de APIs", "Arquitectura Cloud"].map(
+                  {["Aplicaciones web y móviles", "Integración de APIs", "Arquitectura en la nube"].map(
                     (item) => (
                       <li
                         key={item}
@@ -140,14 +139,14 @@ export default function HomePage() {
                   <Icon name="design_services" className="text-[32px]" />
                 </div>
                 <h4 className="font-headline-md text-headline-md text-on-surface mb-4">
-                  Branding & Diseño
+                  Marca y diseño
                 </h4>
                 <p className="font-body-md text-on-surface-variant mb-8 flex-grow">
-                  Identidad visual con impacto. Diseñamos interfaces intuitivas (UI/UX) y narrativas
+                  Identidad visual con impacto. Diseñamos interfaces intuitivas y narrativas
                   de marca que conectan emocionalmente y convierten usuarios en clientes.
                 </p>
                 <ul className="space-y-3 mb-8">
-                  {["Diseño UI/UX Avanzado", "Identidad Corporativa", "Sistemas de Diseño"].map(
+                  {["Diseño de interfaces avanzado", "Identidad corporativa", "Sistemas de diseño"].map(
                     (item) => (
                       <li
                         key={item}
@@ -163,7 +162,7 @@ export default function HomePage() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     className="w-full h-48 object-cover rounded-xl border border-white/5 opacity-80 group-hover:opacity-100 transition-opacity mix-blend-luminosity"
-                    alt="Mockup de branding de alto impacto"
+                    alt="Vista previa de identidad de marca de alto impacto"
                     src={images.branding}
                   />
                 </div>
@@ -185,7 +184,7 @@ export default function HomePage() {
                 Proceso de Ingeniería Iterativa
               </h3>
               <p className="font-body-md text-on-surface-variant mb-10 max-w-lg">
-                No creemos en el azar. Nuestro enfoque está basado en datos, sprints estructurados y
+                No creemos en el azar. Nuestro enfoque está basado en datos, iteraciones estructuradas y
                 colaboración continua. Desde la concepción hasta el despliegue, cada paso es
                 calculable y transparente.
               </p>
@@ -195,10 +194,10 @@ export default function HomePage() {
                     <div className="w-2 h-2 rounded-full bg-primary" />
                   </div>
                   <h4 className="font-headline-md text-[20px] text-on-surface mb-2">
-                    1. Discovery & Estrategia
+                    1. Descubrimiento y estrategia
                   </h4>
                   <p className="font-body-md text-sm text-on-surface-variant">
-                    Análisis profundo de requerimientos, auditoría técnica y definición de KPIs
+                    Análisis profundo de requerimientos, auditoría técnica y definición de indicadores
                     clave para el éxito del proyecto.
                   </p>
                 </div>
@@ -207,7 +206,7 @@ export default function HomePage() {
                     <div className="w-2 h-2 rounded-full bg-white/50" />
                   </div>
                   <h4 className="font-headline-md text-[20px] text-on-surface mb-2">
-                    2. Diseño & Prototipado
+                    2. Diseño y prototipado
                   </h4>
                   <p className="font-body-md text-sm text-on-surface-variant">
                     Creación de wireframes de alta fidelidad, flujos de usuario y sistemas de
@@ -222,7 +221,7 @@ export default function HomePage() {
                     3. Desarrollo Ágil
                   </h4>
                   <p className="font-body-md text-sm text-on-surface-variant">
-                    Sprints quincenales, integración continua (CI/CD) y revisiones de código
+                    Iteraciones quincenales, integración y entrega continuas, y revisiones de código
                     exhaustivas.
                   </p>
                 </div>
@@ -284,7 +283,7 @@ export default function HomePage() {
               </div>
               <div className="absolute bottom-8 right-8 left-8 bg-surface/80 backdrop-blur-md p-4 rounded-xl border border-white/10 z-20">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="font-label-caps text-xs text-on-surface">Sprint Actual</span>
+                  <span className="font-label-caps text-xs text-on-surface">Iteración actual</span>
                   <span className="font-label-caps text-xs text-primary">En Progreso</span>
                 </div>
                 <div className="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">

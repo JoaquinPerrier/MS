@@ -6,7 +6,7 @@ import { images } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Servicios",
   description:
-    "Software Factory y Branding & Publicidad. Dos pilares para empresas que exigen excelencia.",
+    "Fábrica de software, marca y publicidad. Dos pilares para empresas que exigen excelencia.",
 };
 
 export default function ServicesPage() {
@@ -25,7 +25,7 @@ export default function ServicesPage() {
         </h1>
         <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
           Nuestros servicios están diseñados para empresas que exigen excelencia. Dividimos nuestro
-          expertise en dos pilares fundamentales: la construcción robusta de software y la
+          especialización en dos pilares fundamentales: la construcción robusta de software y la
           proyección magnética de marcas.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
@@ -34,12 +34,6 @@ export default function ServicesPage() {
             className="bg-primary text-on-primary px-8 py-4 rounded-full font-label-caps text-label-caps hover:bg-surface-tint hover:shadow-lg transition-all duration-300"
           >
             Inicia tu proyecto
-          </Link>
-          <Link
-            href="/proyectos"
-            className="bg-transparent border border-outline text-on-surface px-8 py-4 rounded-full font-label-caps text-label-caps hover:bg-surface-container-high transition-all duration-300"
-          >
-            Ver casos de estudio
           </Link>
         </div>
       </section>
@@ -66,7 +60,7 @@ export default function ServicesPage() {
                 <Icon name="code" className="text-primary text-3xl" />
               </div>
               <h2 className="font-headline-xl text-headline-xl text-on-surface mb-4">
-                Software Factory
+                Fábrica de software
               </h2>
               <p className="font-body-md text-body-md text-on-surface-variant mb-8 flex-1">
                 Arquitectura de sistemas escalables y desarrollo de aplicaciones de alto
@@ -78,10 +72,10 @@ export default function ServicesPage() {
                   <Icon name="web" className="text-primary text-xl mt-1 opacity-80" />
                   <div>
                     <h3 className="font-headline-md text-[20px] leading-tight text-on-surface mb-1">
-                      Web Apps & Plataformas
+                      Apps web y plataformas
                     </h3>
                     <p className="font-body-md text-[14px] text-on-surface-variant">
-                      Soluciones web complejas, paneles de control y SaaS con arquitecturas modernas
+                      Soluciones web complejas, paneles de control y plataformas con arquitecturas modernas
                       (React, Vue, Node.js).
                     </p>
                   </div>
@@ -93,11 +87,11 @@ export default function ServicesPage() {
                   />
                   <div>
                     <h3 className="font-headline-md text-[20px] leading-tight text-on-surface mb-1">
-                      Sistemas Customizados
+                      Sistemas a medida
                     </h3>
                     <p className="font-body-md text-[14px] text-on-surface-variant">
                       Integraciones API, automatización de procesos empresariales y migración a
-                      infraestructuras cloud.
+                      infraestructuras en la nube.
                     </p>
                   </div>
                 </li>
@@ -147,7 +141,7 @@ export default function ServicesPage() {
                 <Icon name="brush" className="text-tertiary text-3xl" />
               </div>
               <h2 className="font-headline-xl text-headline-xl text-on-surface mb-4">
-                Branding & Publicidad
+                Marca y publicidad
               </h2>
               <p className="font-body-md text-body-md text-on-surface-variant mb-8 flex-1">
                 Forjamos identidades visuales inolvidables y estrategias de comunicación que
@@ -173,7 +167,7 @@ export default function ServicesPage() {
                       Campañas Publicitarias
                     </h3>
                     <p className="font-body-md text-[14px] text-on-surface-variant">
-                      Creatividad multicanal, performance marketing y activaciones digitales de alto
+                      Creatividad en múltiples canales, marketing de rendimiento y activaciones digitales de alto
                       impacto visual.
                     </p>
                   </div>
@@ -185,14 +179,14 @@ export default function ServicesPage() {
                       Estrategia de Contenido
                     </h3>
                     <p className="font-body-md text-[14px] text-on-surface-variant">
-                      Narrativas de marca, copywriting persuasivo y producción de medios (video,
-                      fotografía, motion graphics).
+                      Narrativas de marca, redacción persuasiva y producción de medios (video,
+                      fotografía y animación).
                     </p>
                   </div>
                 </li>
               </ul>
               <div className="flex flex-wrap gap-2 mt-auto pt-6 border-t border-white/5">
-                {["Figma", "Motion", "SEO", "Social"].map((tech) => (
+                {["Figma", "Animación", "SEO", "Redes"].map((tech) => (
                   <span
                     key={tech}
                     className="px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-mono text-[11px] tracking-wider uppercase"
@@ -214,7 +208,7 @@ export default function ServicesPage() {
                 El enfoque integral
               </h3>
               <p className="font-body-lg text-body-lg text-on-surface-variant mb-8">
-                No operamos en silos. Nuestros ingenieros entienden de estética, y nuestros
+                No trabajamos de forma aislada. Nuestros ingenieros entienden de estética, y nuestros
                 diseñadores entienden de sistemas. Esta sinergia crea productos digitales superiores.
               </p>
               <Link

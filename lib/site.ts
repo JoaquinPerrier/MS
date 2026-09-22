@@ -1,8 +1,8 @@
 export const site = {
-  name: "Compañia",
+  name: "Jampe",
   tagline:
-    "Crafting the future of digital presence through precision engineering and elevated design for visionary enterprises.",
-  email: "hola@compania.com",
+    "Construimos el futuro de la presencia digital con ingeniería de precisión y diseño de alto nivel para empresas visionarias.",
+  email: "hola@jampe.com",
   phone: "+34 900 123 456",
   offices: [
     {
@@ -19,7 +19,7 @@ export const site = {
 
 export const images = {
   logo: "https://lh3.googleusercontent.com/aida-public/AB6AXuA21xEzeZh5e_yARf-z3V-ets90FITzx7diwea-MgAdybh-MJG1w-lcisJ-eANtRvSKGOZxrY7ofgq7HNcpwjwmt_oW9niyN-6wdByPqOJMbjo2p17a3SCElaRYsrLk9Bg9pCpdikbDfrWTSRj3coqIUfws99Zf5wwOv9Jg7wTnJRb0IGwTcdl3CogpOclH_yQpWyBGHkUooltqHaVT6oh61S3SwnJSBO3q9GYaLqutLpLWrD3nM_sR",
-  hero: "https://lh3.googleusercontent.com/aida-public/AB6AXuBRBPs9WNhTSaacVXMKnZWlFknIyI3AcrLeK4NrKo1Z1qi9-1FUcedEnHTHo4Z3vd42h5WJZ8vc4O-zYubBlPFxtHOMdE0n51IDPvRFvSBTSM_KoSwGmkmrFhoP3S7_99TneTBMOYcEQhqcfRUN1tCBgX3QTfUW3qSbCMI6zCl3uEfw_I50i7MJ9MS5gPx-OPvb-us2CnnKiHM5WsevRn_afXt24XVQJCOSSFIHRnID0L59fxREFkFt",
+  hero: "/Landing.png",
   software: "https://lh3.googleusercontent.com/aida-public/AB6AXuBBIuY_MQnAEROj-faV5Dfsd7wraJbjBWmu80Hs8gLPbsicFgYVfznxqgv-FDaEphkzZFnJjUnD9sWcLIAB0tDL2rbTaPQu0OA5QKKtpFoJShSb8wQF4sWmygM1g6H7S_dJmggCxsarrAmxBTJx-75z1y4LqO2oeZHPyKzlB9RgOpcP89SD4aQ1IcMYvzzWp2vTS0SXCqqLeN5oQzZkDMW4iF4ereOPvJhswpxc7PD1A_iM1EkCbqCX",
   branding: "https://lh3.googleusercontent.com/aida-public/AB6AXuCjHcPrdyzrc8w2dHrhJvIsE0BWRe_x8Cd-hR_gWchCyJerVnhxfrwzezQ-4X6QQAl6by3rYTbzIflswdckTkmiO9wwvr3EI0IMx3bf-ABAjIPElEUc7AwmNShbS13ku4jFJBsIu_PAFutj5tWnh7BxaKToAQHX-Q5zzwoE7em4DbZ9PqFOxEKr4AFGR4mgs5pmKA_anCLXpTyTzy4mtD4CI7E6uU5CBLA282HDE-_V8NFzridJJWIj",
   methodology: "https://lh3.googleusercontent.com/aida-public/AB6AXuBuENFZJacVRH3lsLxfXzUiCXfQW2QJn1SKTg0Uf3ejUKbL8FHVFQKEYIaHBsgraQ9K-FrQx_FcBZjjkVR9k0x3ajd5c3UgD3f8Ursev04VzcO2V9hywH1-hvJZfgVOPNvnud1jODjLBXyUiBvs3FTDom7w-kYzumWCpLkFKpLxVRHeMs16tpMqRgOkpKHbASAknW3JYPNdMoX913OFkzhr8t6mMou5ftzmb9Tmt6zVikMALknSV5cG",
@@ -32,5 +32,4 @@ export const navItems = [
   { href: "/", label: "Inicio", match: "home" },
   { href: "/servicios", label: "Servicios", match: "services" },
   { href: "/metodologia", label: "Metodología", match: "methodology" },
-  { href: "/proyectos", label: "Proyectos", match: "projects" },
 ] as const;

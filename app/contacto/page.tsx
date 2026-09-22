@@ -60,7 +60,7 @@ export default function ContactPage() {
                   <Icon name="location_on" className="text-[24px]" />
                 </div>
                 <div>
-                  <h3 className="font-headline-md text-headline-md text-on-surface mb-2">Madrid HQ</h3>
+                  <h3 className="font-headline-md text-headline-md text-on-surface mb-2">Sede Madrid</h3>
                   <address className="not-italic font-body-md text-body-md text-on-surface-variant">
                     Paseo de la Castellana, 259
                     <br />
