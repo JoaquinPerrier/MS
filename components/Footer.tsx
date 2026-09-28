@@ -25,7 +25,7 @@ export function Footer() {
             <p className="text-on-surface-variant font-body-md max-w-xs">{site.tagline}</p>
           </div>
           <div className="space-y-6 md:text-right">
-            <h4 className="font-label-caps text-label-caps text-primary">Conectá</h4>
+            <h4 className="font-label-caps text-label-caps text-primary">Nuestras redes sociales</h4>
             <div className="flex gap-4 md:justify-end">
               <a
                 className="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all"
