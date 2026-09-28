@@ -4,7 +4,13 @@ export const site = {
     "Construimos el futuro de la presencia digital con ingeniería de precisión y diseño de alto nivel para empresas visionarias.",
   email: "hola@jampe.com",
   phone: "+34 900 123 456",
+  whatsappMessage: "Hola, quiero hacer una consulta.",
 } as const;
+
+export function whatsappUrl() {
+  const digits = site.phone.replace(/\D/g, "");
+  return `https://wa.me/${digits}?text=${encodeURIComponent(site.whatsappMessage)}`;
+}
 
 export const images = {
   logo: "https://lh3.googleusercontent.com/aida-public/AB6AXuA21xEzeZh5e_yARf-z3V-ets90FITzx7diwea-MgAdybh-MJG1w-lcisJ-eANtRvSKGOZxrY7ofgq7HNcpwjwmt_oW9niyN-6wdByPqOJMbjo2p17a3SCElaRYsrLk9Bg9pCpdikbDfrWTSRj3coqIUfws99Zf5wwOv9Jg7wTnJRb0IGwTcdl3CogpOclH_yQpWyBGHkUooltqHaVT6oh61S3SwnJSBO3q9GYaLqutLpLWrD3nM_sR",
