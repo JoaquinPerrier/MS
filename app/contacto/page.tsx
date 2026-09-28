@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
 import { Icon } from "@/components/Icon";
-import { images, site } from "@/lib/site";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contacto",
@@ -85,19 +85,6 @@ export default function ContactPage() {
                   </a>
                   <p className="font-body-md text-body-md text-on-surface-variant mt-1">{site.phone}</p>
                 </div>
-              </div>
-            </div>
-            <div className="relative w-full h-48 bg-surface-container rounded-2xl overflow-hidden mt-4 shadow-md group">
-              <div className="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent z-10 pointer-events-none" />
-              <div
-                className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                style={{ backgroundImage: `url("${images.madrid}")` }}
-              />
-              <div className="absolute bottom-4 left-4 z-20 flex items-center gap-2 bg-surface/80 backdrop-blur-md px-4 py-2 rounded-full shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                <span className="font-label-caps text-label-caps text-on-surface">
-                  Operando Globalmente
-                </span>
               </div>
             </div>
           </div>
