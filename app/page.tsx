@@ -6,7 +6,7 @@ import { images } from "@/lib/site";
 export default function HomePage() {
   return (
     <div className="flex flex-col w-full font-body-md text-on-surface bg-surface overflow-x-hidden">
-      <section className="relative min-h-[90vh] flex items-center justify-center pt-32 pb-24 px-margin-mobile lg:px-margin-desktop overflow-hidden">
+      <section className="relative flex items-center justify-center pt-18 pb-8 md:min-h-[90vh] md:pt-32 md:pb-24 px-margin-mobile lg:px-margin-desktop overflow-hidden">
         <div className="absolute inset-0 pointer-events-none z-0">
           <div
             className="absolute top-1/4 left-1/4 w-[50vw] h-[50vw] bg-primary/20 rounded-full blur-[120px] mix-blend-screen animate-pulse"
@@ -39,10 +39,12 @@ export default function HomePage() {
                 Ingeniería de Desarrollo
               </span>
             </div>
-            <h1 className="font-display-lg text-display-lg text-on-surface tracking-tighter max-w-4xl leading-tight">
-              Diseño, <br className="hidden md:block" />
+            <h1 className="w-full max-w-full font-display-lg text-[42px] leading-[1.05] tracking-tight text-on-surface md:max-w-4xl md:text-display-lg md:leading-tight md:tracking-tighter">
+              Diseño,
+              <br className="md:hidden" />
+              <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-tertiary to-primary animate-gradient-x">
-                Código y Estrategia.
+                Código y <br className="md:hidden" />Estrategia.
               </span>
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
@@ -79,14 +81,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-24 px-margin-mobile lg:px-margin-desktop bg-surface relative z-10" id="servicios">
+      <section className="py-10 md:py-16 px-margin-mobile lg:px-margin-desktop bg-surface relative z-10" id="servicios">
         <div className="max-w-container-max mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <div className="max-w-2xl">
               <h2 className="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-4">
                 Competencias clave
               </h2>
-              <h3 className="font-headline-xl text-headline-xl text-on-surface">
+              <h3 className="max-w-full font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface">
                 Soluciones Integrales para la Era Digital
               </h3>
             </div>
@@ -172,18 +174,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-32 px-margin-mobile lg:px-margin-desktop bg-surface relative" id="contacto">
+      <section className="py-12 md:py-20 px-margin-mobile lg:px-margin-desktop bg-surface relative" id="contacto">
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-surface-container-high border border-white/5 mb-8 text-primary shadow-[0_0_30px_rgba(207,188,255,0.1)]">
             <Icon name="rocket_launch" className="text-[32px]" />
           </div>
-          <h2 className="font-display-lg text-headline-xl md:text-display-lg text-on-surface mb-6 tracking-tight">
-            ¿Listo para transformar <br /> tu infraestructura?
+          <h2 className="max-w-full font-display-lg text-headline-xl-mobile md:text-display-lg text-on-surface mb-6 tracking-tight">
+            ¿Listo para transformar <br className="hidden md:block" /> tu infraestructura?
           </h2>
-          <p className="font-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
-            Cuéntanos sobre tu visión. Nuestro equipo de ingenieros y diseñadores está listo para
-            analizar tu caso y proponer la arquitectura óptima para tus objetivos.
-          </p>
           <ContactForm variant="home" />
         </div>
       </section>

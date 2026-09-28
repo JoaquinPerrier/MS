@@ -7,9 +7,9 @@ import { images, site } from "@/lib/site";
 export function Footer() {
   const { openLegal } = useLegalModal();
   return (
-    <footer className="bg-surface-container py-10 mt-4 border-t border-white/5">
+    <footer className="bg-surface-container py-6 md:py-10 mt-4 border-t border-white/5">
       <div className="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop">
-        <div className="flex flex-col gap-12 md:flex-row md:items-start md:justify-around mb-16">
+        <div className="flex flex-col gap-8 mb-8 md:flex-row md:items-start md:justify-around md:gap-12 md:mb-16">
           <div className="space-y-6">
             <div className="flex items-center gap-unit">
               {/* eslint-disable-next-line @next/next/no-img-element */}
