@@ -12,18 +12,18 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <div className="flex flex-col w-full relative overflow-hidden">
-      <section className="w-full relative px-margin-mobile lg:px-margin-desktop py-24 md:py-32 flex flex-col justify-center items-center text-center">
+      <section className="w-full relative px-margin-mobile lg:px-margin-desktop pt-18 pb-10 md:py-32 flex flex-col justify-center items-center text-center">
         <div className="absolute inset-0 flex items-center justify-center -z-10 opacity-30 pointer-events-none">
           <div
             className="w-[60vw] h-[60vw] rounded-full bg-primary/20 blur-[100px] animate-pulse"
             style={{ animationDuration: "8s" }}
           />
         </div>
-        <h1 className="font-display-lg text-display-lg text-on-surface mb-6 max-w-4xl tracking-tighter">
+        <h1 className="w-full max-w-full font-display-lg text-[42px] leading-[1.05] tracking-tight text-on-surface mb-6 md:max-w-4xl md:text-display-lg md:leading-tight md:tracking-tighter">
           Donde la ingeniería se encuentra con el{" "}
           <span className="text-primary italic font-serif">diseño de élite</span>
         </h1>
-        <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
+        <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-8 md:mb-12">
           Nuestros servicios están diseñados para empresas que exigen excelencia. Dividimos nuestro
           especialización en dos pilares fundamentales: la construcción robusta de software y la
           proyección magnética de marcas.
@@ -38,9 +38,9 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="w-full max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop pb-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          <div className="group relative flex flex-col bg-surface-container rounded-[2rem] overflow-hidden transition-transform duration-500 hover:-translate-y-2">
+      <section className="w-full max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop pb-12 md:pb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-stretch">
+          <div className="group relative h-full flex flex-col bg-surface-container rounded-[2rem] overflow-hidden transition-transform duration-500 hover:-translate-y-2">
             <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
             <div className="h-80 w-full relative overflow-hidden">
               <div
@@ -59,10 +59,10 @@ export default function ServicesPage() {
               <div className="w-16 h-16 rounded-2xl bg-surface/80 backdrop-blur-md flex items-center justify-center mb-8 shadow-xl">
                 <Icon name="code" className="text-primary text-3xl" />
               </div>
-              <h2 className="font-headline-xl text-headline-xl text-on-surface mb-4">
+              <h2 className="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface mb-4">
                 Fábrica de software
               </h2>
-              <p className="font-body-md text-body-md text-on-surface-variant mb-8 flex-1">
+              <p className="font-body-md text-body-md text-on-surface-variant mb-8">
                 Arquitectura de sistemas escalables y desarrollo de aplicaciones de alto
                 rendimiento. Construimos el núcleo tecnológico que impulsa tu negocio hacia el
                 futuro.
@@ -121,7 +121,7 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          <div className="group relative flex flex-col bg-surface-container rounded-[2rem] overflow-hidden transition-transform duration-500 hover:-translate-y-2 lg:mt-16">
+          <div className="group relative h-full flex flex-col bg-surface-container rounded-[2rem] overflow-hidden transition-transform duration-500 hover:-translate-y-2">
             <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
             <div className="h-80 w-full relative overflow-hidden">
               <div
@@ -140,10 +140,10 @@ export default function ServicesPage() {
               <div className="w-16 h-16 rounded-2xl bg-surface/80 backdrop-blur-md flex items-center justify-center mb-8 shadow-xl">
                 <Icon name="brush" className="text-tertiary text-3xl" />
               </div>
-              <h2 className="font-headline-xl text-headline-xl text-on-surface mb-4">
+              <h2 className="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface mb-4">
                 Marca y publicidad
               </h2>
-              <p className="font-body-md text-body-md text-on-surface-variant mb-8 flex-1">
+              <p className="font-body-md text-body-md text-on-surface-variant mb-8">
                 Forjamos identidades visuales inolvidables y estrategias de comunicación que
                 resuenan. Elevamos la percepción de tu marca en un mercado ruidoso.
               </p>
@@ -194,49 +194,6 @@ export default function ServicesPage() {
                     {tech}
                   </span>
                 ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="w-full bg-surface-container-lowest py-24 border-y border-white/5">
-        <div className="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop">
-          <div className="flex flex-col md:flex-row gap-12 items-center justify-between">
-            <div className="w-full md:w-1/2 max-w-xl">
-              <h3 className="font-headline-xl text-headline-xl text-on-surface mb-6">
-                El enfoque integral
-              </h3>
-              <p className="font-body-lg text-body-lg text-on-surface-variant mb-8">
-                No trabajamos de forma aislada. Nuestros ingenieros entienden de estética, y nuestros
-                diseñadores entienden de sistemas. Esta sinergia crea productos digitales superiores.
-              </p>
-              <Link
-                className="inline-flex items-center gap-2 text-primary font-label-caps text-label-caps hover:text-surface-tint transition-colors uppercase tracking-widest group"
-                href="/metodologia"
-              >
-                Conoce nuestra metodología
-                <Icon name="arrow_forward" className="transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
-            <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-              <div className="grid grid-cols-2 gap-8 lg:gap-16">
-                <div className="flex flex-col">
-                  <span className="font-display-lg text-display-lg text-on-surface tracking-tighter">
-                    98<span className="text-primary">%</span>
-                  </span>
-                  <span className="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mt-2">
-                    Retención de clientes
-                  </span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-display-lg text-display-lg text-on-surface tracking-tighter">
-                    50<span className="text-tertiary">+</span>
-                  </span>
-                  <span className="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mt-2">
-                    Lanzamientos exitosos
-                  </span>
-                </div>
               </div>
             </div>
           </div>

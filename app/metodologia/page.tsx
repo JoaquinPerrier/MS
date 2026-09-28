@@ -153,28 +153,8 @@ export default function MethodologyPage() {
             </p>
             <div className="flex flex-col gap-6 pt-4">
               <div className="bg-surface-container-low p-6 rounded-xl flex items-center gap-6 group hover:bg-surface-container transition-colors">
-                <div className="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center relative overflow-hidden">
-                  <svg className="absolute inset-0 w-full h-full transform -rotate-90" viewBox="0 0 36 36">
-                    <path
-                      className="text-surface-variant"
-                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeDasharray="100, 100"
-                      strokeWidth="2"
-                    />
-                    <path
-                      className="text-primary transition-all duration-1000 ease-out"
-                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeDasharray="85, 100"
-                      strokeWidth="2"
-                    />
-                  </svg>
-                  <span className="font-label-caps text-label-caps text-on-surface relative z-10">
-                    85%
-                  </span>
+                <div className="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+                  <Icon name="check_circle" className="text-[28px]" />
                 </div>
                 <div>
                   <h4 className="font-headline-md text-headline-md text-on-surface text-[18px]">
@@ -186,28 +166,8 @@ export default function MethodologyPage() {
                 </div>
               </div>
               <div className="bg-surface-container-low p-6 rounded-xl flex items-center gap-6 group hover:bg-surface-container transition-colors">
-                <div className="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center relative overflow-hidden">
-                  <svg className="absolute inset-0 w-full h-full transform -rotate-90" viewBox="0 0 36 36">
-                    <path
-                      className="text-surface-variant"
-                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeDasharray="100, 100"
-                      strokeWidth="2"
-                    />
-                    <path
-                      className="text-tertiary transition-all duration-1000 ease-out"
-                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeDasharray="99, 100"
-                      strokeWidth="2"
-                    />
-                  </svg>
-                  <span className="font-label-caps text-label-caps text-on-surface relative z-10">
-                    99%
-                  </span>
+                <div className="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-tertiary">
+                  <Icon name="hub" className="text-[28px]" />
                 </div>
                 <div>
                   <h4 className="font-headline-md text-headline-md text-on-surface text-[18px]">
@@ -228,8 +188,11 @@ export default function MethodologyPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent" />
               <div className="absolute bottom-8 left-8 right-8 bg-surface/90 backdrop-blur-md rounded-xl p-6 shadow-2xl border border-white/5 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                <div className="flex justify-between items-end">
-                  <div>
+                <div className="flex items-center gap-4 min-w-0">
+                  <div className="w-12 h-12 shrink-0 rounded-full bg-primary/15 flex items-center justify-center text-primary">
+                    <Icon name="integration_instructions" className="text-[22px]" />
+                  </div>
+                  <div className="min-w-0">
                     <span className="font-label-caps text-label-caps text-primary block mb-2">
                       ITERACIÓN ACTUAL
                     </span>
@@ -237,15 +200,6 @@ export default function MethodologyPage() {
                       Fase 3: Integración de API
                     </span>
                   </div>
-                  <div className="text-right">
-                    <span className="font-label-caps text-label-caps text-on-surface-variant block mb-2">
-                      PROGRESO
-                    </span>
-                    <span className="font-headline-md text-headline-md text-on-surface">64%</span>
-                  </div>
-                </div>
-                <div className="w-full h-1 bg-surface-container-highest mt-4 rounded-full overflow-hidden">
-                  <div className="h-full bg-primary w-[64%] shadow-[0_0_10px_rgba(207,188,255,0.5)]" />
                 </div>
               </div>
             </div>
