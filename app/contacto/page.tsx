@@ -19,7 +19,7 @@ const partners = [
 export default function ContactPage() {
   return (
     <div className="flex flex-col w-full">
-      <section className="relative w-full pt-12 pb-24 lg:pt-24 lg:pb-32 px-margin-mobile lg:px-margin-desktop overflow-hidden">
+      <section className="relative w-full pt-18 pb-10 md:pt-24 md:pb-32 px-margin-mobile lg:px-margin-desktop overflow-hidden">
         <div className="absolute inset-0 w-full h-full pointer-events-none opacity-20">
           <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -43,7 +43,7 @@ export default function ContactPage() {
               <span className="font-label-caps text-label-caps text-primary tracking-[0.2em] uppercase flex items-center gap-4 before:w-8 before:h-[1px] before:bg-primary">
                 Hablemos
               </span>
-              <h1 className="font-display-lg text-display-lg text-on-surface tracking-tight">
+              <h1 className="w-full max-w-full font-display-lg text-[42px] leading-[1.05] tracking-tight text-on-surface md:text-display-lg md:leading-tight md:tracking-tighter">
                 Iniciemos una <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-tertiary">
                   Conversación.
@@ -94,7 +94,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="w-full py-16 bg-surface-container-low overflow-hidden shadow-inner relative">
+      <section className="w-full py-10 md:py-16 bg-surface-container-low overflow-hidden shadow-inner relative">
         <div className="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop flex flex-col md:flex-row items-center gap-8 justify-between">
           <h4 className="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest shrink-0 whitespace-nowrap">
             Empresas que confían en nosotros

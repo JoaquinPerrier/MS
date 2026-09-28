@@ -275,7 +275,7 @@ function PageForm({
       <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-white/[0.03] to-transparent pointer-events-none" />
       <form onSubmit={onSubmit} className="relative z-10 flex flex-col gap-8">
         <div className="border-b border-white/10 pb-4">
-          <h2 className="font-headline-xl text-headline-xl-mobile lg:text-headline-xl text-on-surface">
+          <h2 className="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface">
             Envíanos un Mensaje
           </h2>
         </div>
