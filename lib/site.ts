@@ -4,17 +4,6 @@ export const site = {
     "Construimos el futuro de la presencia digital con ingeniería de precisión y diseño de alto nivel para empresas visionarias.",
   email: "hola@jampe.com",
   phone: "+34 900 123 456",
-  offices: [
-    {
-      city: "Silicon Valley",
-      address: "440 N Wolfe Rd, Sunnyvale, CA",
-    },
-    {
-      city: "Madrid",
-      address: "Paseo de la Castellana, 259, Madrid",
-      detail: "Paseo de la Castellana, 259\n28046 Madrid, España",
-    },
-  ],
 } as const;
 
 export const images = {

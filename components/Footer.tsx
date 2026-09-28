@@ -7,9 +7,9 @@ import { images, site } from "@/lib/site";
 export function Footer() {
   const { openLegal } = useLegalModal();
   return (
-    <footer className="bg-surface-container py-20 mt-12 border-t border-white/5">
+    <footer className="bg-surface-container py-10 mt-4 border-t border-white/5">
       <div className="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-24 mb-16">
+        <div className="flex flex-col gap-12 md:flex-row md:items-start md:justify-around mb-16">
           <div className="space-y-6">
             <div className="flex items-center gap-unit">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -24,20 +24,9 @@ export function Footer() {
             </div>
             <p className="text-on-surface-variant font-body-md max-w-xs">{site.tagline}</p>
           </div>
-          <div className="space-y-6">
-            <h4 className="font-label-caps text-label-caps text-primary">Oficinas</h4>
-            <div className="space-y-4 font-body-md text-on-surface-variant">
-              {site.offices.map((office) => (
-                <div key={office.city}>
-                  <p className="text-on-surface font-semibold">{office.city}</p>
-                  <p>{office.address}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="space-y-6">
+          <div className="space-y-6 md:text-right">
             <h4 className="font-label-caps text-label-caps text-primary">Conectá</h4>
-            <div className="flex gap-4">
+            <div className="flex gap-4 md:justify-end">
               <a
                 className="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all"
                 href="https://www.linkedin.com"
