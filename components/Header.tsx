@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Icon } from "@/components/Icon";
-import { images, navItems, site } from "@/lib/site";
+import { navItems, site } from "@/lib/site";
 
 export function Header() {
   const pathname = usePathname();
@@ -15,7 +15,11 @@ export function Header() {
       <div className="h-20 max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between">
         <Link href="/" className="flex items-center gap-unit" onClick={() => setOpen(false)}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img alt={site.name} className="h-8 w-auto object-contain" src={images.logo} />
+          <img
+            alt=""
+            className="h-10 w-10 object-contain"
+            src="/JampeLogoSinFondo.png"
+          />
           <span className="font-headline-md text-headline-md tracking-tight">{site.name}</span>
         </Link>
 
