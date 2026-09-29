@@ -11,8 +11,13 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.1)]">
-      <div className="h-20 max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between">
+    <header className="fixed inset-x-0 top-0 z-50">
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-surface shadow-[0_1px_8px_rgba(0,0,0,0.1)]"
+      />
+      <div aria-hidden className="absolute inset-0 bg-surface/80 backdrop-blur-xl" />
+      <div className="relative h-20 max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between">
         <Link href="/" className="flex items-center gap-unit" onClick={() => setOpen(false)}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -62,7 +67,7 @@ export function Header() {
       </div>
 
       {open ? (
-        <div className="lg:hidden border-t border-white/5 bg-surface/95 backdrop-blur-xl px-margin-mobile py-6 flex flex-col gap-4">
+        <div className="relative z-10 lg:hidden border-t border-white/5 bg-surface px-margin-mobile py-6 flex flex-col gap-4">
           {navItems.map((item) => {
             const active = pathname === item.href;
             return (

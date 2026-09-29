@@ -33,11 +33,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="es"
       className={`${inter.variable} ${montserrat.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-surface text-on-surface font-body-md selection:bg-primary selection:text-on-primary overflow-x-hidden">
+      <body className="min-h-full flex flex-col bg-surface text-on-surface font-body-md selection:bg-primary selection:text-on-primary">
         <LegalProvider>
           <Header />
-          <main className="pt-20 min-h-screen flex-1">{children}</main>
-          <Footer />
+          <div className="flex min-h-screen flex-1 flex-col overflow-x-hidden">
+            <main className="pt-20 flex-1">{children}</main>
+            <Footer />
+          </div>
         </LegalProvider>
       </body>
     </html>
