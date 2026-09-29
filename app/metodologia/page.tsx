@@ -85,7 +85,7 @@ export default function MethodologyPage() {
             <br />
             Metodología
           </h1>
-          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+          <p className="font-body-lg text-[17px] leading-relaxed text-on-surface-variant max-w-2xl md:text-body-lg">
             En Jampe, no solo construimos software; diseñamos ecosistemas digitales resilientes.
             Nuestro proceso iterativo fusiona pensamiento estratégico, ingeniería de precisión y
             estética de vanguardia para transformar visiones complejas en realidades tangibles y

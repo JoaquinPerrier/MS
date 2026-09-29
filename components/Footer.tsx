@@ -22,7 +22,9 @@ export function Footer() {
                 {site.name}
               </span>
             </div>
-            <p className="text-on-surface-variant font-body-md max-w-xs">{site.tagline}</p>
+            <p className="text-on-surface-variant font-body-md text-[length:15px] leading-[1.6] max-w-xs md:text-body-md">
+              {site.tagline}
+            </p>
           </div>
           <div className="space-y-6 md:text-right">
             <h4 className="font-label-caps text-label-caps text-primary">Nuestras redes sociales</h4>

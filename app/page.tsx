@@ -47,7 +47,7 @@ export default function HomePage() {
                 Código y <br className="md:hidden" />Estrategia.
               </span>
             </h1>
-            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            <p className="font-body-lg text-[17px] leading-relaxed text-on-surface-variant max-w-2xl md:text-body-lg">
               Potenciamos la presencia digital de tu empresa con sitios modernos y soluciones a
               medida que optimizan tus procesos y simplifican tu día a día. Construimos el futuro de
               tu marca con rigor técnico y diseño excepcional.

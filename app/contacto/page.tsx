@@ -49,7 +49,7 @@ export default function ContactPage() {
                   Conversación.
                 </span>
               </h1>
-              <p className="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+              <p className="font-body-lg text-[17px] leading-[1.6] text-on-surface-variant max-w-md md:text-body-lg">
                 Estamos listos para transformar tu visión en una realidad digital. Contáctanos para
                 discutir tu próximo proyecto o para conocer más sobre nuestra metodología.
               </p>

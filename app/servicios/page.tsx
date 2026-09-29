@@ -23,7 +23,7 @@ export default function ServicesPage() {
           Donde la ingeniería se encuentra con el{" "}
           <span className="text-primary italic font-serif">diseño de élite</span>
         </h1>
-        <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-8 md:mb-12">
+        <p className="font-body-lg text-[17px] leading-[1.6] text-on-surface-variant max-w-2xl mx-auto mb-8 md:mb-12 md:text-body-lg">
           Nuestros servicios están diseñados para empresas que exigen excelencia. Dividimos nuestro
           especialización en dos pilares fundamentales: la construcción robusta de software y la
           proyección magnética de marcas.
