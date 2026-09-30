@@ -6,7 +6,7 @@ import { images } from "@/lib/site";
 export default function HomePage() {
   return (
     <div className="flex flex-col w-full font-body-md text-on-surface bg-surface overflow-x-hidden">
-      <section className="relative flex items-center justify-center pt-18 pb-8 md:min-h-[90vh] md:pt-32 md:pb-24 px-margin-mobile lg:px-margin-desktop overflow-hidden">
+      <section className="relative flex items-center justify-center pt-18 pb-2 md:min-h-[90vh] md:pt-32 md:pb-24 px-margin-mobile lg:px-margin-desktop overflow-hidden">
         <div className="absolute inset-0 pointer-events-none z-0">
           <div
             className="absolute top-1/4 left-1/4 w-[50vw] h-[50vw] bg-primary/20 rounded-full blur-[120px] mix-blend-screen animate-pulse"
@@ -32,7 +32,7 @@ export default function HomePage() {
           </svg>
         </div>
         <div className="relative z-10 max-w-container-max mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
-          <div className="lg:col-span-8 flex flex-col items-start space-y-8">
+          <div className="lg:col-span-8 flex flex-col items-start space-y-4 md:space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container/50 backdrop-blur-md border border-white/5">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               <span className="font-label-caps text-label-caps text-primary tracking-widest uppercase">
@@ -52,16 +52,16 @@ export default function HomePage() {
               medida que optimizan tus procesos y simplifican tu día a día. Construimos el futuro de
               tu marca con rigor técnico y diseño excepcional.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex w-full flex-row-reverse gap-2 sm:w-auto sm:flex-row sm:gap-4 sm:pt-4">
               <Link
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-on-primary rounded-full font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 shadow-[0_0_20px_rgba(207,188,255,0.3)] hover:shadow-[0_0_30px_rgba(207,188,255,0.5)] group"
+                className="inline-flex flex-1 items-center justify-center gap-1.5 px-3 py-3 bg-primary text-on-primary rounded-full font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 shadow-[0_0_20px_rgba(207,188,255,0.3)] hover:shadow-[0_0_30px_rgba(207,188,255,0.5)] group sm:flex-none sm:gap-2 sm:px-8 sm:py-4"
                 href="/contacto"
               >
                 Iniciar Proyecto
                 <Icon name="arrow_forward" className="text-[18px] group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-on-surface rounded-full font-label-caps text-label-caps hover:bg-surface-container-high transition-all duration-300 border border-white/10"
+                className="inline-flex flex-1 items-center justify-center gap-2 px-3 py-3 bg-transparent text-on-surface rounded-full font-label-caps text-label-caps hover:bg-surface-container-high transition-all duration-300 border border-white/10 sm:flex-none sm:px-8 sm:py-4"
                 href="/servicios"
               >
                 Explorar Servicios
