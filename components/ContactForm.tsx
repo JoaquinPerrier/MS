@@ -231,7 +231,7 @@ function HomeForm({
           </>
         ) : (
           <>
-            Solicitar Consulta Gratuita
+            Enviar consulta
             <Icon name="send" className="text-[18px]" />
           </>
         )}

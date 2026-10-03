@@ -57,24 +57,11 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-8">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary shadow-sm">
-                  <Icon name="location_on" className="text-[24px]" />
-                </div>
-                <div>
-                  <h3 className="font-headline-md text-headline-md text-on-surface mb-2">Sede Madrid</h3>
-                  <address className="not-italic font-body-md text-body-md text-on-surface-variant">
-                    Paseo de la Castellana, 259
-                    <br />
-                    28046 Madrid, España
-                  </address>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <div className="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary shadow-sm">
                   <Icon name="mail" className="text-[24px]" />
                 </div>
                 <div>
                   <h3 className="font-headline-md text-headline-md text-on-surface mb-2">
-                    Contacto Directo
+                    Enviamos un mail
                   </h3>
                   <a
                     className="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300 flex items-center gap-2"
@@ -83,7 +70,23 @@ export default function ContactPage() {
                     {site.email}
                     <Icon name="arrow_forward" className="text-[16px]" />
                   </a>
-                  <p className="font-body-md text-body-md text-on-surface-variant mt-1">{site.phone}</p>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary shadow-sm">
+                  <Icon name="smartphone" className="text-[24px]" />
+                </div>
+                <div>
+                  <h3 className="font-headline-md text-headline-md text-on-surface mb-2">
+                    Enviamos un mensaje
+                  </h3>
+                  <a
+                    className="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300 flex items-center gap-2"
+                    href={`tel:${site.phone.replace(/\s/g, "")}`}
+                  >
+                    {site.phone}
+                    <Icon name="arrow_forward" className="text-[16px]" />
+                  </a>
                 </div>
               </div>
             </div>

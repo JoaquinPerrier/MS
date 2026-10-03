@@ -2,7 +2,7 @@ export const site = {
   name: "Jampe",
   tagline:
     "Construimos el futuro de la presencia digital con ingeniería de precisión y diseño de alto nivel para empresas visionarias.",
-  email: "hola@jampe.com",
+  email: "contacto@jampe.com.ar",
   phone: "+34 900 123 456",
   whatsappMessage: "Hola, quiero hacer una consulta.",
 } as const;
