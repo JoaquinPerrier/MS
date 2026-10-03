@@ -19,7 +19,7 @@ const partners = [
 export default function ContactPage() {
   return (
     <div className="flex flex-col w-full">
-      <section className="relative w-full pt-18 pb-10 md:pt-24 md:pb-32 px-margin-mobile lg:px-margin-desktop overflow-hidden">
+      <section className="relative w-full pt-18 pb-2 md:pt-24 md:pb-32 px-margin-mobile lg:px-margin-desktop overflow-hidden">
         <div className="absolute inset-0 w-full h-full pointer-events-none opacity-20">
           <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
