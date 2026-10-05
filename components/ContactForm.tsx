@@ -178,7 +178,7 @@ function HomeForm({
         </div>
         <div className="space-y-2">
           <label className="font-label-caps text-[10px] text-on-surface-variant tracking-widest uppercase">
-            Correo Corporativo
+            Correo Electrónico
           </label>
           <input
             className="w-full bg-surface-container-highest border border-white/10 rounded-lg px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-primary focus:shadow-[0_0_10px_rgba(207,188,255,0.2)] transition-all"
@@ -220,7 +220,7 @@ function HomeForm({
       </div>
       {status === "error" ? <FieldError message={errorMessage} /> : null}
       <button
-        className="w-full bg-primary text-on-primary py-4 rounded-xl font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-colors shadow-lg flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+        className="w-full bg-primary text-on-primary py-4 rounded-xl font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-colors shadow-lg flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
         type="submit"
         disabled={isSubmitting}
       >
@@ -371,7 +371,7 @@ function PageForm({
             .
           </p>
           <button
-            className="w-full sm:w-auto bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 rounded-full flex items-center justify-center gap-3 hover:bg-primary-container hover:text-on-primary-container transition-all duration-300 shadow-md group/btn order-1 sm:order-2 overflow-hidden relative disabled:opacity-70 disabled:cursor-not-allowed"
+            className="w-full sm:w-auto bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 rounded-full flex items-center justify-center gap-3 hover:bg-primary-container hover:text-on-primary-container transition-all duration-300 shadow-md group/btn order-1 sm:order-2 overflow-hidden relative cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
             type="submit"
             disabled={isSubmitting}
           >
