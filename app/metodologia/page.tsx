@@ -183,7 +183,7 @@ export default function MethodologyPage() {
           <div className="flex-1 w-full relative">
             <div className="aspect-square w-full rounded-2xl overflow-hidden bg-surface-container-high shadow-xl relative group">
               <div
-                className="bg-cover bg-center w-full h-full opacity-80 group-hover:scale-105 transition-transform duration-700 ease-out mix-blend-luminosity"
+                className="bg-cover bg-center w-full h-full opacity-80 group-hover:scale-105 transition-transform duration-700 ease-out"
                 style={{ backgroundImage: `url("${images.methodology}")` }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent" />
