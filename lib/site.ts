@@ -16,7 +16,7 @@ export const images = {
   hero: "/Landing.png",
   software: "/DesarrolloSoftwareLanding.jpg",
   branding: "/DesarrolloMarcaLanding.jpg",
-  methodology: "/Api.png",
+  methodology: "/Api.jpeg",
   softwareFactory: "/FabricaServicios.jpg",
   brandingPillar: "/MarketingServicio.jpg",
 } as const;
