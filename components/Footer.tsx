@@ -2,7 +2,7 @@
 
 import { Icon } from "@/components/Icon";
 import { useLegalModal } from "@/components/LegalModal";
-import { images, site } from "@/lib/site";
+import { site } from "@/lib/site";
 
 export function Footer() {
   const { openLegal } = useLegalModal();
@@ -14,9 +14,9 @@ export function Footer() {
             <div className="flex items-center gap-unit">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                alt={site.name}
-                className="h-6 w-auto opacity-70 grayscale"
-                src={images.logo}
+                alt=""
+                className="h-10 w-10 object-contain"
+                src="/JampeLogoSinFondo.png"
               />
               <span className="font-headline-md text-headline-md text-on-surface-variant">
                 {site.name}

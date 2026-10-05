@@ -13,7 +13,6 @@ export function whatsappUrl() {
 }
 
 export const images = {
-  logo: "https://lh3.googleusercontent.com/aida-public/AB6AXuA21xEzeZh5e_yARf-z3V-ets90FITzx7diwea-MgAdybh-MJG1w-lcisJ-eANtRvSKGOZxrY7ofgq7HNcpwjwmt_oW9niyN-6wdByPqOJMbjo2p17a3SCElaRYsrLk9Bg9pCpdikbDfrWTSRj3coqIUfws99Zf5wwOv9Jg7wTnJRb0IGwTcdl3CogpOclH_yQpWyBGHkUooltqHaVT6oh61S3SwnJSBO3q9GYaLqutLpLWrD3nM_sR",
   hero: "/Landing.png",
   software: "https://lh3.googleusercontent.com/aida-public/AB6AXuBBIuY_MQnAEROj-faV5Dfsd7wraJbjBWmu80Hs8gLPbsicFgYVfznxqgv-FDaEphkzZFnJjUnD9sWcLIAB0tDL2rbTaPQu0OA5QKKtpFoJShSb8wQF4sWmygM1g6H7S_dJmggCxsarrAmxBTJx-75z1y4LqO2oeZHPyKzlB9RgOpcP89SD4aQ1IcMYvzzWp2vTS0SXCqqLeN5oQzZkDMW4iF4ereOPvJhswpxc7PD1A_iM1EkCbqCX",
   branding: "https://lh3.googleusercontent.com/aida-public/AB6AXuCjHcPrdyzrc8w2dHrhJvIsE0BWRe_x8Cd-hR_gWchCyJerVnhxfrwzezQ-4X6QQAl6by3rYTbzIflswdckTkmiO9wwvr3EI0IMx3bf-ABAjIPElEUc7AwmNShbS13ku4jFJBsIu_PAFutj5tWnh7BxaKToAQHX-Q5zzwoE7em4DbZ9PqFOxEKr4AFGR4mgs5pmKA_anCLXpTyTzy4mtD4CI7E6uU5CBLA282HDE-_V8NFzridJJWIj",
