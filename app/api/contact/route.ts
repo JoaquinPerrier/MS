@@ -1,13 +1,9 @@
 import { Resend } from "resend";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
-import path from "node:path";
 import { NextResponse } from "next/server";
 import { contactSchema } from "@/lib/contact";
 import { site } from "@/lib/site";
 
 export const runtime = "nodejs";
-
-const submissionsFile = path.join(process.cwd(), "data", "contacts.json");
 
 export async function POST(request: Request) {
   try {
@@ -27,47 +23,16 @@ export async function POST(request: Request) {
       return NextResponse.json({ ok: true });
     }
 
-    const receivedAt = new Date().toISOString();
-    await persistSubmission({ ...payload, receivedAt });
+    await sendEmail({ ...payload, receivedAt: new Date().toISOString() });
 
-    const emailed = await sendEmail({ ...payload, receivedAt });
-
-    return NextResponse.json({
-      ok: true,
-      emailed,
-    });
+    return NextResponse.json({ ok: true });
   } catch (error) {
     console.error("Contact form error", error);
-    return NextResponse.json(
-      { error: "No pudimos procesar tu mensaje. Intentá de nuevo." },
-      { status: 500 },
-    );
-  }
-}
-
-async function persistSubmission(entry: {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-  receivedAt: string;
-}) {
-  try {
-    await mkdir(path.dirname(submissionsFile), { recursive: true });
-    let existing: unknown[] = [];
-
-    try {
-      const raw = await readFile(submissionsFile, "utf8");
-      existing = JSON.parse(raw) as unknown[];
-      if (!Array.isArray(existing)) existing = [];
-    } catch {
-      existing = [];
-    }
-
-    existing.push(entry);
-    await writeFile(submissionsFile, JSON.stringify(existing, null, 2), "utf8");
-  } catch (error) {
-    console.warn("Could not persist contact submission", error);
+    const message =
+      error instanceof Error && error.message
+        ? error.message
+        : "No pudimos procesar tu mensaje. Intentá de nuevo.";
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
 
@@ -80,8 +45,7 @@ async function sendEmail(entry: {
 }) {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
-    console.info("Contact submission without RESEND_API_KEY", entry);
-    return false;
+    throw new Error("El envío de correo no está configurado.");
   }
 
   const resend = new Resend(apiKey);
@@ -109,8 +73,6 @@ async function sendEmail(entry: {
     console.error("Resend error", error);
     throw new Error("No pudimos enviar el correo.");
   }
-
-  return true;
 }
 
 function escapeHtml(value: string) {

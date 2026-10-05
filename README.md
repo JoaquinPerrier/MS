@@ -23,7 +23,6 @@ Abrí [http://localhost:3000](http://localhost:3000).
 El formulario de inicio y de `/contacto` envía los datos a `POST /api/contact`.
 
 - Valida nombre, correo, asunto y mensaje.
-- Guarda cada consulta en `data/contacts.json`.
-- Si configurás `RESEND_API_KEY`, también manda el correo a `CONTACT_TO_EMAIL`.
+- Envía el correo con Resend a `CONTACT_TO_EMAIL`.
 
-Copiá `.env.example` a `.env.local` y completá las variables para activar el correo.
+Copiá `.env.example` a `.env.local` y completá `RESEND_API_KEY` para que el formulario pueda enviar.
