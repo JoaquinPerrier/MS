@@ -127,7 +127,7 @@ function HomeForm({
 }: FormViewProps) {
   if (status === "success") {
     return (
-      <div className="max-w-xl mx-auto text-left space-y-6 bg-surface-container p-8 md:p-12 rounded-3xl border border-white/5 shadow-2xl relative">
+      <div className="max-w-xl mx-auto text-left space-y-6 bg-surface-container p-8 md:p-12 rounded-3xl border border-white/5 shadow-2xl relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-tertiary to-primary opacity-50" />
         <div className="flex flex-col items-center text-center gap-4 py-6">
           <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
@@ -152,7 +152,7 @@ function HomeForm({
   return (
     <form
       onSubmit={onSubmit}
-      className="max-w-xl mx-auto text-left space-y-6 bg-surface-container p-8 md:p-12 rounded-3xl border border-white/5 shadow-2xl relative"
+      className="max-w-xl mx-auto text-left space-y-6 bg-surface-container p-8 md:p-12 rounded-3xl border border-white/5 shadow-2xl relative overflow-hidden"
     >
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-tertiary to-primary opacity-50" />
       <input
