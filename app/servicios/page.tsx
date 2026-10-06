@@ -28,7 +28,7 @@ export default function ServicesPage() {
           especialización en dos pilares fundamentales: la construcción robusta de software y la
           proyección magnética de marcas.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="mb-8 flex flex-col sm:flex-row gap-4 md:mb-0">
           <Link
             href="/contacto"
             className="bg-primary text-on-primary px-8 py-4 rounded-full font-label-caps text-label-caps hover:bg-surface-tint hover:shadow-lg transition-all duration-300"
