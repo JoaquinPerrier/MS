@@ -6,6 +6,8 @@ export const site = {
   email: "contacto@jampe.com.ar",
   phone: "+34 900 123 456",
   whatsappMessage: "Hola, quiero hacer una consulta.",
+  linkedin: "https://www.linkedin.com/company/jampe-software-factory",
+  instagram: "",
 } as const;
 
 export function whatsappUrl() {
