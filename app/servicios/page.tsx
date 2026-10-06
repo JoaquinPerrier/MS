@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <div className="flex flex-col w-full relative overflow-hidden">
-      <section className="w-full relative px-margin-mobile lg:px-margin-desktop pt-18 pb-2 md:py-32 flex flex-col justify-center items-center text-center">
+      <section className="w-full relative px-margin-mobile lg:px-margin-desktop pt-4 pb-2 md:py-32 flex flex-col justify-center items-center text-center">
         <div className="absolute inset-0 flex items-center justify-center -z-10 opacity-30 pointer-events-none">
           <div
             className="w-[60vw] h-[60vw] rounded-full bg-primary/20 blur-[100px] animate-pulse"

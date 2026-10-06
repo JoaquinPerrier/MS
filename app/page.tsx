@@ -6,7 +6,7 @@ import { images } from "@/lib/site";
 export default function HomePage() {
   return (
     <div className="flex flex-col w-full font-body-md text-on-surface bg-surface overflow-x-hidden">
-      <section className="relative flex items-center justify-center pt-18 pb-2 md:min-h-[90vh] md:pt-32 md:pb-24 px-margin-mobile lg:px-margin-desktop overflow-hidden">
+      <section className="relative flex items-center justify-center pt-4 pb-2 md:min-h-[90vh] md:pt-32 md:pb-24 px-margin-mobile lg:px-margin-desktop overflow-hidden">
         <div className="absolute inset-0 pointer-events-none z-0">
           <div
             className="absolute top-1/4 left-1/4 w-[50vw] h-[50vw] bg-primary/20 rounded-full blur-[120px] mix-blend-screen animate-pulse"

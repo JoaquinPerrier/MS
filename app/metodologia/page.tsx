@@ -78,7 +78,7 @@ export default function MethodologyPage() {
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-tertiary/5 rounded-full blur-[100px] mix-blend-screen transform -translate-x-1/4 translate-y-1/4" />
       </div>
 
-      <section className="w-full max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop pt-18 pb-2 md:pt-24 md:pb-32 relative z-10">
+      <section className="w-full max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop pt-4 pb-2 md:pt-24 md:pb-32 relative z-10">
         <div className="flex flex-col gap-6 md:gap-8 max-w-4xl">
           <h1 className="w-full max-w-full font-display-lg text-[42px] leading-[1.05] tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-on-surface to-on-surface-variant md:text-display-lg md:leading-tight md:tracking-tighter">
             Nuestra
