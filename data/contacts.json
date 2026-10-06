@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Joaquin Perrier",
+    "email": "joaquinperrier@hotmail.com",
+    "subject": "Otra Consulta",
+    "message": "Test a ver q",
+    "receivedAt": "2026-08-21T17:53:17.009Z"
+  },
+  {
+    "name": "JOAQUIN PERRIER",
+    "email": "joaquinperrier@hotmail.com",
+    "subject": "Otro",
+    "message": "Test 2 a ver si funciona",
+    "receivedAt": "2026-09-28T22:23:33.449Z"
+  }
+]
