@@ -4,7 +4,7 @@ export const site = {
   tagline:
     "Construimos el futuro de la presencia digital con ingeniería de precisión y diseño de alto nivel para empresas visionarias.",
   email: "contacto@jampe.com.ar",
-  phone: "+34 900 123 456",
+  phone: "+341 9 6058355",
   whatsappMessage: "Hola, quiero hacer una consulta.",
   linkedin: "https://www.linkedin.com/company/jampe-software-factory",
   instagram: "https://www.instagram.com/jampesoftware/",
@@ -12,6 +12,7 @@ export const site = {
 
 export function whatsappUrl() {
   const digits = site.phone.replace(/\D/g, "");
+  console.log(digits);
   return `https://wa.me/${digits}?text=${encodeURIComponent(site.whatsappMessage)}`;
 }
 

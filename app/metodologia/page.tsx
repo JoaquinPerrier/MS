@@ -80,7 +80,7 @@ export default function MethodologyPage() {
 
       <section className="w-full max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop pt-4 pb-2 md:pt-24 md:pb-32 relative z-10">
         <div className="flex flex-col gap-6 md:gap-8 max-w-4xl">
-          <h1 className="w-full max-w-full font-display-lg text-[42px] leading-[1.25] tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-on-surface to-on-surface-variant pr-[0.08em] md:text-display-lg md:leading-tight md:tracking-tighter">
+          <h1 className="w-full max-w-full font-display-lg text-[42px] leading-[1.25] tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-on-surface to-on-surface-variant pr-[0.25em] md:text-display-lg md:leading-tight md:tracking-tighter">
             Nuestra
             <br />
             Metodología
