@@ -5,15 +5,13 @@ export const site = {
     "Construimos el futuro de la presencia digital con ingeniería de precisión y diseño de alto nivel para empresas visionarias.",
   email: "contacto@jampe.com.ar",
   phone: "+341 9 6058355",
-  whatsappMessage: "Hola, quiero hacer una consulta.",
+  whatsappMessage: "Hola, cómo estás? Quiero hacer una consulta!",
   linkedin: "https://www.linkedin.com/company/jampe-software-factory",
   instagram: "https://www.instagram.com/jampesoftware/",
 } as const;
 
 export function whatsappUrl() {
-  const digits = site.phone.replace(/\D/g, "");
-  console.log(digits);
-  return `https://wa.me/${digits}?text=${encodeURIComponent(site.whatsappMessage)}`;
+  return `https://wa.me/5493416058355?text=${encodeURIComponent(site.whatsappMessage)}`;
 }
 
 export const images = {

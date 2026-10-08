@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
 import { Icon } from "@/components/Icon";
-import { site } from "@/lib/site";
+import { site, whatsappUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contacto",
@@ -82,7 +82,9 @@ export default function ContactPage() {
                   </h3>
                   <a
                     className="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300 flex items-center gap-2"
-                    href={`tel:${site.phone.replace(/\s/g, "")}`}
+                    href={whatsappUrl()}
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     {site.phone}
                     <Icon name="arrow_forward" className="text-[16px]" />
